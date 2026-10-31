@@ -1,12 +1,21 @@
 {
   "name": "roxy-cloner-v2",
-  "version": "1.0.0",
-  "description": "",
+  "version": "2.0.0",
+  "description": "Clone a Discord server (channels, roles, emoji) into another server from a command.",
   "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "engines": {
+    "node": ">=20"
   },
-  "keywords": [],
+  "scripts": {
+    "start": "node index.js",
+    "test": "node --test \"test/*.test.js\"",
+    "check": "node --check index.js && for f in $(find src -name '*.js'); do node --check \"$f\" || exit 1; done"
+  },
+  "keywords": [
+    "discord",
+    "cloner",
+    "discord.js"
+  ],
   "author": "",
   "license": "ISC",
   "type": "commonjs",
